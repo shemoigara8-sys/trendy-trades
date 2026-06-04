@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trendy Trades</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Trendy Trades</h1>
+      <p class="tagline">Buy & sell new and second-hand items</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="auth">
+      <h2>Account</h2>
+      <div id="authArea">
+        <div class="auth-row">
+          <input id="regUser" placeholder="Username" />
+          <input id="regPass" placeholder="Password" type="password" />
+          <button id="btnRegister" class="btn">Register</button>
+        </div>
+        <div class="auth-row" style="margin-top:8px">
+          <input id="loginUser" placeholder="Username" />
+          <input id="loginPass" placeholder="Password" type="password" />
+          <button id="btnLogin" class="btn">Login</button>
+        </div>
+        <div style="margin-top:8px">
+          <a class="btn google" href="/auth/google">Login with Google</a>
+        </div>
+        <div style="margin-top:8px">
+          <span id="me"></span>
+          <button id="btnLogout" class="remove" style="display:none;margin-left:8px">Logout</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="add-item">
+      <h2>Add Item</h2>
+      <form id="itemForm">
+        <input id="title" placeholder="Item title" required />
+        <textarea id="desc" placeholder="Description"></textarea>
+        <div class="row">
+          <input id="price" placeholder="Price" type="number" min="0" step="0.01" />
+          <select id="condition">
+            <option>New</option>
+            <option>Like New</option>
+            <option>Used</option>
+            <option>For parts</option>
+          </select>
+        </div>
+        <div style="margin-top:8px">
+          <input id="image" type="file" accept="image/png,image/jpeg,image/webp" />
+        </div>
+        <div class="field">
+          <img id="imagePreview" class="preview" src="" alt="Image preview" hidden />
+        </div>
+        <div id="formMessage" class="message"></div>
+        <button type="submit" class="btn">Add Item</button>
+      </form>
+    </section>
+
+    <section class="listings">
+      <h2>Listings</h2>
+      <ul id="itemsList" class="items"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Built with ♥ for local demos</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

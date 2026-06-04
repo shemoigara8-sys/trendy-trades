@@ -1,0 +1,42 @@
+:root{
+  --bg:#0b0f14;
+  --panel:#0f1720;
+  --muted:#9fb0c8;
+  --accent:#6ee7b7;
+  --card:#0b1220;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,var(--bg),#071018);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.site-header{background:transparent;padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.site-header h1{margin:0;color:#e6f2ff;font-size:28px}
+.tagline{margin:6px 0 0;color:var(--muted);font-size:14px}
+main{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:28px 0}
+.add-item,.listings{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.add-item h2,.listings h2{margin:0 0 12px;color:#e6f2ff}
+form input,form textarea,form select{width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:var(--muted)}
+form .row{display:flex;gap:10px}
+form .row input{flex:1}
+form .row select{width:180px}
+.auth-row{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start}
+.auth-row input{flex:1;min-width:160px}
+.message{margin-top:12px;padding:10px 12px;border-radius:10px;font-size:0.95rem;line-height:1.4}
+.message.info{background:rgba(110,231,183,0.14);color:#b7ffdd}
+.message.error{background:rgba(248,113,113,0.16);color:#ffd1d1}
+.preview{display:block;max-width:100%;max-height:220px;border-radius:12px;margin-top:10px;border:1px solid rgba(255,255,255,0.1)}
+.btn{background:var(--accent);border:none;padding:10px 14px;border-radius:10px;color:#022;cursor:pointer}
+.btn.google{background:#4285F4;color:#fff;display:inline-block;text-decoration:none}
+.items{list-style:none;padding:0;margin:0}
+.item{display:flex;flex-direction:column;padding:12px;border-radius:10px;margin-bottom:10px;background:linear-gradient(180deg,rgba(255,255,255,0.015),transparent);border:1px solid rgba(255,255,255,0.02)}
+.item .meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+.price{color:var(--accent);font-weight:700}
+.remove{background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--muted);padding:6px 8px;border-radius:8px;cursor:pointer}
+.site-footer{padding:18px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:900px){main{grid-template-columns:1fr}}

@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Oigara",
+      "password": "$2b$10$p2H0uMX52NuutDPQC63x2.yewTClW7rAhyLXxd5r3O5M.arAgEipG",
+      "created": 1780489654354
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "title": "fatt",
+      "description": "fdee",
+      "price": 2000,
+      "condition": "Like New",
+      "image": null,
+      "created": 1780489683529
+    }
+  ]
+}
